@@ -7,13 +7,13 @@ import java.util.Random;
 public class TesteEmpregadoSemPolimorfismo {
     public static void main(String[] args) {
         Random gerador = new Random();
-        List<Empregado> empregados;
+        List<EmpregadoS> empregados;
         empregados = new ArrayList<>();
         //simula um acesso a uma base de dados
         //a estrutura usada nao nos preocupa
         for(int i = 0; i < 10; i++){
             int tipo = gerador.nextInt(5) + 1;
-            Empregado e = new Empregado(tipo);
+            EmpregadoS e = new EmpregadoS(tipo);
             switch(tipo){
                 case 1:
                     e.setSalario(2000 + gerador.nextDouble() * 1200);
@@ -60,7 +60,7 @@ public class TesteEmpregadoSemPolimorfismo {
             else if (empregados.get(i).getTipo() == 5 ) {
                 salarioFinal = empregados.get(i).getNumeroDeTarefas() * empregados.get(i).getValorTarefa();
             }
-            System.out.printf("Empregado %d: %.2f\n", i + 1, salarioFinal);
+            System.out.printf("EmpregadoS %d: %.2f\n", i + 1, salarioFinal);
         }
     }
 }

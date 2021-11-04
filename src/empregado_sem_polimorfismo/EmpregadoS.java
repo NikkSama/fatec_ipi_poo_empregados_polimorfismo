@@ -1,6 +1,6 @@
 package empregado_sem_polimorfismo;
 
-public class Empregado {
+public class EmpregadoS {
     private int tipo;
     private double salario;
     private double comissao;
@@ -10,7 +10,7 @@ public class Empregado {
     private int numeroDeTarefas;
     private double valorTarefa;
 
-    public Empregado(int tipo) {
+    public EmpregadoS(int tipo) {
         this.tipo = tipo;
     }
 
